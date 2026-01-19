@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anshuman Aerotech | Aerospace & Defence Consulting</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Space Grotesk Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  const section = document.getElementById('journey');
+  const counters = document.querySelectorAll('.counter');
+  let hasRun = false;
+
+  function startCounters() {
+    if (hasRun) return;
+    hasRun = true;
+
+    counters.forEach(counter => {
+      const target = +counter.dataset.target;
+      let current = 0;
+
+      const update = () => {
+        const increment = target / 80;
+        current += increment;
+
+        if (current < target) {
+          counter.textContent = Math.ceil(current);
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = target + '+';
+        }
+      };
+      update();
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 150) {
+      startCounters();
+    }
+  });
+</script>
+
+
+<style>
+  html, body {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+</style>
+<style>
+  /* CORE SERVICES HOVER FIX */
+  .service-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .service-card h4 {
+    transition: color 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+  }
+
+  .service-card:hover h4 {
+    color: #A3E635; /* website green */
+  }
+</style>
+
+</head>
+
+<body class="bg-[#0B1C2D] text-gray-200">
+
+<!-- NAVBAR -->
+<header class="fixed w-full z-50 bg-[#0B1C2D]/80 backdrop-blur border-b border-white/10">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <h1 class="text-xl font-bold tracking-wide">ANSHUMAN AEROTECH</h1>
+<nav class="space-x-8 hidden md:block text-sm">
+  <a href="index.html" class="hover:text-teal-400">Home</a>
+  <a href="about.html" class="hover:text-teal-400">About</a>
+  <a href="#services" class="hover:text-teal-400">Services</a>
+  <a href="#industries" class="hover:text-teal-400">Industries</a>
+  <a href="#contact" class="hover:text-teal-400">Contact</a>
+</nav>
+
+  </div>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="relative h-screen w-full overflow-hidden">
+
+  <!-- Background Image -->
+  <img 
+    src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa"
+    alt="Rocket Launch"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto h-full flex items-center px-6">
+    <div class="max-w-3xl">
+
+      <p class="text-lime-400 uppercase tracking-widest text-sm mb-4">
+        Aerospace & Defence Engineering
+      </p>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-white">
+        Engineering <br />
+        <span class="text-lime-400">Mission-Critical</span><br />
+        Aerospace Systems
+      </h1>
+
+      <p class="mt-6 text-lg text-gray-200 max-w-2xl">
+        Delivering airworthiness, precision calibration, certification and
+        defence logistics solutions with uncompromised reliability.
+      </p>
+
+      <div class="mt-10 flex gap-6">
+        <a href="#services"
+           class="px-8 py-4 bg-lime-400 text-black font-semibold rounded hover:bg-lime-300 transition">
+          Explore Services
+        </a>
+
+        <a href="#contact"
+           class="px-8 py-4 border border-white text-white rounded hover:bg-white/10 transition">
+          Contact Us
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+ <!-- JOURNEY / STATS SECTION -->
+<section class="py-32 bg-gradient-to-b from-[#0B1C2D] to-[#102A44] text-white">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+
+    <!-- LEFT CONTENT -->
+    <div>
+      <p class="text-lime-400 font-medium mb-3">Customers’ Journeys</p>
+
+      <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+        Navigating Success Stories:<br />
+        Our Customers’ Journeys
+      </h2>
+
+      <p class="text-gray-300 max-w-lg mb-12">
+        We partner with aerospace and defence organizations to transform
+        complex engineering challenges into reliable, compliant, and
+        mission-ready solutions.
+      </p>
+
+      <!-- STATS (STATIC) -->
+      <div class="flex gap-20">
+        <div>
+          <h3 class="text-5xl font-bold text-lime-400">20+</h3>
+          <p class="text-gray-300 mt-2">Years of Experience</p>
+        </div>
+
+        <div>
+          <h3 class="text-5xl font-bold text-lime-400">9+</h3>
+          <p class="text-gray-300 mt-2">Team Members</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE (AEROSPACE & DEFENCE) -->
+    <div>
+      <img
+        src="https://www.capgemini.com/wp-content/uploads/2023/06/A-culture-for-aerospace-innovation-banner.jpg"
+        alt="Aerospace and Defence Engineering"
+        class="rounded-2xl shadow-2xl w-full object-cover"
+      />
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SERVICES FLOW (NO OVERLAP + ALIGNED) -->
+<section class="py-40 bg-gradient-to-b from-[#0B1C2D] to-[#102A44]">
+
+  <div class="max-w-6xl mx-auto flex flex-col items-center gap-24">
+
+    <!-- Top Row -->
+    <div class="grid grid-cols-3 gap-20">
+      <div class="bg-purple-200 rounded-full px-8 py-4 flex items-center gap-4 shadow-lg">
+        <span class="bg-white text-sm font-bold rounded-full px-3 py-1">01</span>
+        <p class="font-medium text-gray-900">Airworthiness Testing</p>
+      </div>
+
+      <div class="bg-lime-300 rounded-full px-8 py-4 flex items-center gap-4 shadow-lg">
+        <span class="bg-white text-sm font-bold rounded-full px-3 py-1">02</span>
+        <p class="font-medium text-gray-900">Precision Calibration</p>
+      </div>
+
+      <div class="bg-purple-200 rounded-full px-8 py-4 flex items-center gap-4 shadow-lg">
+        <span class="bg-white text-sm font-bold rounded-full px-3 py-1">03</span>
+        <p class="font-medium text-gray-900">Quality & Compliance Systems</p>
+      </div>
+    </div>
+
+    <!-- Center Heading -->
+    <h2 class="text-4xl md:text-5xl font-bold text-white text-center leading-tight">
+      Solutions for Defence <br /> & Aerospace
+    </h2>
+
+    <!-- Bottom Row -->
+    <div class="grid grid-cols-3 gap-20">
+      <div class="bg-lime-300 rounded-full px-8 py-4 flex items-center gap-4 shadow-lg">
+        <span class="bg-white text-sm font-bold rounded-full px-3 py-1">04</span>
+        <p class="font-medium text-gray-900">
+          Certification & Regulatory Support
+        </p>
+      </div>
+
+      <div class="bg-purple-200 rounded-full px-8 py-4 flex items-center gap-4 shadow-lg">
+        <span class="bg-white text-sm font-bold rounded-full px-3 py-1">05</span>
+        <p class="font-medium text-gray-900">
+          Maintenance & Reliability Engineering
+        </p>
+      </div>
+
+      <div class="bg-lime-300 rounded-full px-8 py-4 flex items-center gap-4 shadow-lg">
+        <span class="bg-white text-sm font-bold rounded-full px-3 py-1">06</span>
+        <p class="font-medium text-gray-900">
+          Defence Supply Chain & Logistics
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="py-20 bg-[#0E2236]">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h3 class="text-3xl font-bold mb-4">Who We Are</h3>
+      <p class="text-gray-300 leading-relaxed">
+        Anshuman Aerotech is a specialised aerospace and defence consulting firm
+        delivering testing, calibration, airworthiness and regulatory compliance
+        solutions aligned with national and international standards.
+      </p>
+      <ul class="mt-6 space-y-2">
+        <li>✔ Aerospace-grade precision engineering</li>
+        <li>✔ Defence compliance driven processes</li>
+        <li>✔ Reliability where failure is not an option</li>
+      </ul>
+    </div>
+    <img src="https://images.unsplash.com/photo-1517976547714-720226b864c1"
+         class="rounded-xl shadow-lg" />
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-12">Our Core Services</h3>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white/5 p-6 rounded-xl border border-white/10 service-card">
+        <h4 class="font-semibold text-xl mb-2">Testing & Calibration</h4>
+        <p class="text-gray-400">High-accuracy calibration for aerospace-grade components.</p>
+      </div>
+
+      <div class="bg-white/5 p-6 rounded-xl border border-white/10 service-card">
+        <h4 class="font-semibold text-xl mb-2">Quality Management Systems</h4>
+        <p class="text-gray-400">ISO / AS compliance, audits and implementation.</p>
+      </div>
+
+      <div class="bg-white/5 p-6 rounded-xl border border-white/10 service-card"> 
+        <h4 class="font-semibold text-xl mb-2">Airworthiness Certification</h4>
+        <p class="text-gray-400">Regulatory support for aircraft and defence systems.</p>
+      </div>
+
+      <div class="bg-white/5 p-6 rounded-xl border border-white/10 service-card"> 
+        <h4 class="font-semibold text-xl mb-2">Defence Logistics Support</h4>
+        <p class="text-gray-400">Lifecycle and supply-chain advisory for defence projects.</p>
+      </div>
+
+      <div class="bg-white/5 p-6 rounded-xl border border-white/10 service-card"> 
+        <h4 class="font-semibold text-xl mb-2">Technical Documentation</h4>
+        <p class="text-gray-400">Engineering documents aligned with certification standards.</p>
+      </div>
+
+      <div class="bg-white/5 p-6 rounded-xl border border-white/10 service-card"> 
+        <h4 class="font-semibold text-xl mb-2">Compliance Audits</h4>
+        <p class="text-gray-400">Independent audits ensuring regulatory adherence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="py-20 bg-[#0E2236]">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-12">Industries We Serve</h3>
+    <div class="grid md:grid-cols-4 gap-6 text-center">
+      <div class="bg-white/5 p-6 rounded-xl">Military Aviation</div>
+      <div class="bg-white/5 p-6 rounded-xl">Defence Manufacturing</div>
+      <div class="bg-white/5 p-6 rounded-xl">UAV & Drones</div>
+      <div class="bg-white/5 p-6 rounded-xl">Aerospace R&D</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="py-20">
+  <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+    <div>
+      <h3 class="text-3xl font-bold mb-4">Contact Us</h3>
+      <p class="text-gray-400">
+        Reach out for aerospace and defence consulting enquiries.
+      </p>
+      <p class="mt-4">📧 info@anshumanaerotech.in</p>
+      <p>📞 +91 XXXXX XXXXX</p>
+    </div>
+
+    <form class="space-y-4">
+      <input class="w-full p-3 rounded bg-white/10" placeholder="Name" />
+      <input class="w-full p-3 rounded bg-white/10" placeholder="Email" />
+      <textarea class="w-full p-3 rounded bg-white/10" placeholder="Your Requirement"></textarea>
+      <button class="w-full py-3 bg-teal-500 text-black font-semibold rounded">
+        Submit Enquiry
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black py-6 text-center text-sm text-gray-400">
+  © 2026 Anshuman Aerotech • Aerospace & Defence Consulting • Made in India 🇮🇳
+</footer>
+
+</body>
+</html>
