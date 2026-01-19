@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Anshuman Aerotech</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com">
+
+    
+  </script>
+
+  <!-- Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+/* TOGGLE SWITCH */
+.toggle-switch {
+  width: 56px;
+  height: 30px;
+  background: #1e293b;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.toggle-switch.active {
+  background: #a3e635;
+}
+
+.toggle-knob {
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: transform 0.35s ease;
+}
+
+.toggle-switch.active .toggle-knob {
+  transform: translateX(26px);
+}
+
+/* SLIDE EFFECT */
+.mission-card {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.5s ease;
+  position: absolute;
+  width: 100%;
+}
+
+.mission-card.active {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+}
+.social-icon {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: #a3e635;
+  color: black;
+  border-color: #a3e635;
+}
+</style>
+
+</head>
+
+<body class="bg-gradient-to-b from-[#0B1C2D] to-[#102A44] text-gray-200">
+
+<!-- NAVBAR -->
+<header class="fixed w-full z-50 bg-[#0B1C2D]/80 backdrop-blur border-b border-white/10">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <h1 class="text-xl font-bold tracking-wide text-lime-400">
+      Anshuman Aerotech
+    </h1>
+    <nav class="space-x-8 hidden md:block text-sm">
+      <a href="index.html" class="hover:text-lime-400">Home</a>
+      <a href="about.html" class="hover:text-teal-400">About</a>
+      <a href="services.html" class="hover:text-lime-400">Services</a>
+      <a href="index.html#contact" class="hover:text-lime-400">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO / BANNER -->
+<section class="relative h-[70vh] w-full overflow-hidden pt-24">
+
+  <img
+    src="https://images.unsplash.com/photo-1508614589041-895b88991e3e"
+    alt="Aircraft Hangar"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto h-full flex items-center px-6">
+    <h1 class="text-6xl md:text-7xl font-extrabold text-white">
+      About
+    </h1>
+  </div>
+
+</section>
+
+<!-- ABOUT INTRO -->
+<section class="py-28 bg-white text-gray-800">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+
+    <h2 class="text-4xl md:text-5xl font-bold mb-8">
+      Leading Aerospace and Defence <br />
+      Consulting Services
+    </h2>
+
+    <p class="text-gray-600 leading-relaxed max-w-3xl mx-auto">
+      At Anshuman Aerotech, we specialize in transforming complex aerospace and
+      defence challenges into structured, compliant, and mission-ready solutions.
+      Our tailored consulting services have empowered organizations to achieve
+      regulatory compliance, operational efficiency, and long-term sustainability
+      across the Indian defence and aviation ecosystem.
+    </p>
+
+    <p class="text-gray-600 leading-relaxed max-w-3xl mx-auto mt-6">
+      With a strong focus on quality, safety, and certification excellence, we
+      guide our clients through complex airworthiness and regulatory processes,
+      enabling confident market entry and mission success.
+    </p>
+
+  </div>
+</section>
+
+<!-- FULL WIDTH IMAGE -->
+<section class="py-16 bg-white">
+  <div class="flex justify-center mt-8">
+    <img
+      src="https://www.airport-suppliers.com/wp-content/uploads/2020/02/RUBB-EFASS-Main.jpg"
+      alt="Defence Aircraft Hangar"
+     class="rounded-2xl shadow-2xl
+           w-[700px] max-w-full
+           transition-transform duration-500
+           hover:scale-[1.02]"
+    />
+  </div>
+</section>
+
+<!-- MISSION & VALUES SECTION -->
+<section class="py-24 bg-gradient-to-b from-[#0B1C2D] to-[#102A44] text-gray-200">
+  <div class="max-w-5xl mx-auto px-6 text-center relative">
+
+    <!-- SECTION TITLE -->
+    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+      Our Company Mission & Values
+    </h2>
+
+    <!-- TOGGLE -->
+    <div class="flex items-center justify-center gap-4 mb-14">
+      <span id="label-left" class="text-lime-400 font-medium">
+        Engineering Excellence
+      </span>
+
+      <button id="toggleBtn" class="toggle-switch">
+        <span class="toggle-knob"></span>
+      </button>
+
+      <span id="label-right" class="text-gray-400">
+        Innovation & Integrity
+      </span>
+    </div>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="relative min-h-[520px] flex items-center justify-center">
+
+      <!-- STATE 1 -->
+      <div id="state1" class="mission-card active text-center">
+        <img
+          src="https://airpowerasia.com/wp-content/uploads/2021/05/economictimes.indiatimes.com_.jpg"
+          alt="Aerospace Engineering"
+          class="mx-auto rounded-2xl shadow-2xl mb-10 max-w-2xl"
+        />
+
+        <h3 class="text-3xl font-bold text-white mb-4">
+          Engineering the Future of Aerospace
+        </h3>
+
+        <p class="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          At Anshuman Aerotech, engineering excellence is the foundation of
+          everything we build. From airworthiness certification to mission-critical
+          defence systems, we deliver precision-driven solutions that perform
+          reliably under the most demanding operational conditions.
+        </p>
+      </div>
+
+      <!-- STATE 2 -->
+      <div id="state2" class="mission-card text-center">
+        <img
+          src="https://www.tedcomd.com/sites/default/files/AdobeStock_64925724.jpeg"
+          alt="Innovation & Integrity"
+          class="mx-auto rounded-2xl shadow-2xl mb-10 max-w-2xl"
+        />
+
+        <h3 class="text-3xl font-bold text-white mb-4">
+          Innovation with Integrity
+        </h3>
+
+        <p class="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Innovation at Anshuman Aerotech is driven by integrity, accountability,
+          and responsibility. We uphold the highest regulatory and ethical standards
+          while advancing next-generation aerospace and defence technologies
+          designed for safety, trust, and long-term national impact.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-[#0F0F0F] rounded-t-[32px] text-gray-300">
+  <div class="max-w-7xl mx-auto px-10 py-20">
+
+    <!-- TOP GRID -->
+    <div class="grid md:grid-cols-3 gap-20">
+
+      <!-- LEFT -->
+      <div>
+<div class="flex items-center gap-4 mb-6">
+  <img
+    src="logo.webp"
+    alt="Anshuman Aerotech Logo"
+    class="h-14 w-auto md:h-16"
+  />
+  <h3 class="text-2xl font-semibold text-white">
+    Anshuman Aerotech
+  </h3>
+</div>
+
+
+        <p class="text-gray-400 leading-relaxed max-w-sm mb-6">
+          Anshuman Aerotech is a specialized defence and aerospace services
+          company delivering high-accuracy testing, calibration, quality
+          management, logistics support, and certification advisory.
+        </p>
+
+
+        <!-- SOCIALS -->
+<div class="flex gap-4">
+
+  <!-- Facebook -->
+  <a href="#" class="social-icon" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current">
+      <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.6l-.4 3h-2.2v7A10 10 0 0 0 22 12z"/>
+    </svg>
+  </a>
+
+  <!-- X (Twitter) -->
+  <a href="#" class="social-icon" aria-label="X">
+    <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current">
+      <path d="M18.3 2H21l-6.6 7.5L22 22h-6.5l-5-6.4L5 22H2.2l7-8L2 2h6.6l4.6 5.9L18.3 2z"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="#" class="social-icon" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" class="w-4 h-4 fill-current">
+      <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.3 2.3.5.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.5 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.9-.5 2.3-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.3.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.3-2.3-.5-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.5-2.3-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.9.5-2.3.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.3-.5 1.3-.1 1.7-.1 4.9-.1zm0 3.2a6.6 6.6 0 1 0 0 13.2 6.6 6.6 0 0 0 0-13.2zm0 10.8a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4zm6.8-10.9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+    </svg>
+  </a>
+
+</div>
+
+      </div>
+
+      <!-- CENTER -->
+      <div>
+        <h4 class="text-white font-semibold mb-6">Products</h4>
+        <ul class="space-y-4 text-gray-400">
+          <li><a href="about.html" class="hover:text-lime-400">About</a></li>
+          <li><a href="#services" class="hover:text-lime-400">Services</a></li>
+          <li><a href="#contact" class="hover:text-lime-400">Contact</a></li>
+          <li><a href="#" class="hover:text-lime-400">Privacy policy</a></li>
+        </ul>
+      </div>
+
+      <!-- RIGHT -->
+      <div>
+        <h4 class="text-white font-semibold mb-6">Contact Us</h4>
+
+        <div class="space-y-6 text-gray-400">
+          <p>
+            <span class="text-white">EMAIL :</span><br />
+            Anshumanent98@gmail.com
+          </p>
+
+          <p>
+            <span class="text-white">Phone number :</span><br />
+            6230573962
+          </p>
+
+          <p>
+            <span class="text-white">Support :</span><br />
+            24x7 available
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="border-t border-white/10 my-12"></div>
+
+    <!-- BOTTOM -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-400">
+      <p>
+        Advanced Testing, Calibration, Quality Management, Logistics, and
+        Certification Advisory for Defence and Aerospace Systems.
+      </p>
+
+      <p class="text-white">
+        © 2026 Anshuman Aerotech
+      </p>
+    </div>
+
+  </div>
+
+  <!-- BACK TO TOP -->
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})"
+    class="fixed bottom-6 right-6 bg-lime-400 text-black w-12 h-12 rounded-full font-bold shadow-lg hover:bg-lime-300 transition">
+    ↑
+  </button>
+</footer>
+
+</footer>
+
+<script>
+const toggle = document.getElementById("toggleBtn");
+const state1 = document.getElementById("state1");
+const state2 = document.getElementById("state2");
+const leftLabel = document.getElementById("label-left");
+const rightLabel = document.getElementById("label-right");
+
+let active = 1;
+
+toggle.addEventListener("click", () => {
+  toggle.classList.toggle("active");
+
+  if (active === 1) {
+    state1.classList.remove("active");
+    state2.classList.add("active");
+
+    leftLabel.classList.remove("text-lime-400");
+    leftLabel.classList.add("text-gray-400");
+
+    rightLabel.classList.add("text-lime-400");
+
+    active = 2;
+  } else {
+    state2.classList.remove("active");
+    state1.classList.add("active");
+
+    rightLabel.classList.remove("text-lime-400");
+    rightLabel.classList.add("text-gray-400");
+
+    leftLabel.classList.add("text-lime-400");
+
+    active = 1;
+  }
+});
+</script>
+
+</body>
+</html>

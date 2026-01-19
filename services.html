@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Anshuman Aerotech</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Space Grotesk', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-[#0B1C2D] text-gray-200">
+
+<!-- NAVBAR -->
+<header class="fixed w-full z-50 bg-[#0B1C2D]/80 backdrop-blur border-b border-white/10">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <div class="flex items-center gap-3">
+      <img src="logo.webp" class="h-8 w-auto" alt="Logo">
+      <span class="font-semibold text-lime-400">Anshuman Aerotech</span>
+    </div>
+
+    <nav class="space-x-8 hidden md:block text-sm">
+      <a href="index.html" class="hover:text-lime-400">Home</a>
+      <a href="about.html" class="hover:text-lime-400">About</a>
+      <a href="services.html" class="text-lime-400 font-medium">Services</a>
+      <a href="contact.html" class="hover:text-lime-400">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative h-[70vh] pt-20 overflow-hidden rounded-b-[32px]">
+
+  <img
+    src="https://images.unsplash.com/photo-1529070538774-1843cb3265df"
+    class="absolute inset-0 w-full h-full object-cover"
+    alt="Aircraft"
+  />
+
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto h-full flex items-center px-6">
+    <h1 class="text-6xl font-bold text-white">Services</h1>
+  </div>
+
+</section>
+
+<!-- SERVICES SECTION -->
+<section class="bg-[#F5F6F8] text-gray-900 py-32 -mt-20 rounded-t-[40px]">
+
+  <div class="max-w-7xl mx-auto px-6 text-center">
+
+    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+      Advanced Engineering Capabilities for Mission-Critical Systems
+    </h2>
+
+    <p class="max-w-3xl mx-auto text-gray-600 mb-20">
+      We deliver aerospace and defence-grade engineering solutions designed
+      for reliability, safety, and regulatory compliance across complex
+      operational environments.
+    </p>
+
+    <!-- CARDS GRID -->
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <!-- CARD -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg relative">
+        <span class="absolute top-4 right-4 bg-red-500 text-white text-xs px-2 py-1 rounded">HOT</span>
+        <h3 class="text-xl font-semibold mb-3">
+          Aerospace Structures & Precision Manufacturing
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          High-accuracy machining and fabrication of flight-critical components
+          using 3-axis to 5-axis CNC, tight-tolerance tooling, and aerospace-grade
+          materials with full traceability and quality control.
+        </p>
+      </div>
+
+      <!-- CARD -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg relative">
+        <span class="absolute top-4 right-4 bg-red-500 text-white text-xs px-2 py-1 rounded">HOT</span>
+        <h3 class="text-xl font-semibold mb-3">
+          Avionics & Embedded Systems
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Design, integration, and testing of avionics, control electronics,
+          wiring harnesses, and embedded systems compliant with aviation and
+          military standards.
+        </p>
+      </div>
+
+      <!-- CARD -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg relative">
+        <span class="absolute top-4 right-4 bg-red-500 text-white text-xs px-2 py-1 rounded">HOT</span>
+        <h3 class="text-xl font-semibold mb-3">
+          Defence Systems & Robotics
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Development and integration of unmanned systems, ground support
+          equipment, ruggedized enclosures, and automated defence subsystems
+          built for extreme operational environments.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#0F0F0F] rounded-t-[32px] text-gray-400">
+  <div class="max-w-7xl mx-auto px-10 py-20 grid md:grid-cols-3 gap-20">
+
+    <div>
+      <div class="flex items-center gap-4 mb-6">
+        <img src="logo.webp" class="h-12 w-auto" alt="Logo">
+        <h3 class="text-xl font-semibold text-white">Anshuman Aerotech</h3>
+      </div>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Advanced testing, calibration, quality management, logistics,
+        and certification advisory for aerospace and defence systems.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="text-white font-semibold mb-4">Products</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="about.html" class="hover:text-lime-400">About</a></li>
+        <li><a href="services.html" class="hover:text-lime-400">Services</a></li>
+        <li><a href="contact.html" class="hover:text-lime-400">Contact</a></li>
+        <li><a href="#" class="hover:text-lime-400">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-white font-semibold mb-4">Contact Us</h4>
+      <p class="text-sm">EMAIL: anshumanent98@gmail.com</p>
+      <p class="text-sm mt-2">Phone: 6230573962</p>
+      <p class="text-sm mt-2">Support: 24×7 available</p>
+    </div>
+
+  </div>
+
+  <div class="text-center py-6 text-sm border-t border-white/10">
+    © 2026 Anshuman Aerotech • Aerospace & Defence Consulting • Made in India 🇮🇳
+  </div>
+</footer>
+
+</body>
+</html>

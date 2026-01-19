@@ -82,14 +82,13 @@
 <header class="fixed w-full z-50 bg-[#0B1C2D]/80 backdrop-blur border-b border-white/10">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
     <h1 class="text-xl font-bold tracking-wide">ANSHUMAN AEROTECH</h1>
-<nav class="space-x-8 hidden md:block text-sm">
-  <a href="index.html" class="hover:text-teal-400">Home</a>
-  <a href="about.html" class="hover:text-teal-400">About</a>
-  <a href="services.html" class="hover:text-teal-400">Services</a>
-  <a href="#industries" class="hover:text-teal-400">Industries</a>
-  <a href="#contact" class="hover:text-teal-400">Contact</a>
-</nav>
-
+    <nav class="space-x-8 hidden md:block text-sm">
+      <a href="#" class="hover:text-teal-400">Home</a>
+      <a href="#" class="hover:text-teal-400">About</a>
+      <a href="#" class="hover:text-teal-400">Services</a>
+      <a href="#" class="hover:text-teal-400">Industries</a>
+      <a href="#" class="hover:text-teal-400">Contact</a>
+    </nav>
   </div>
 </header>
 
@@ -143,7 +142,7 @@
 
 </section>
  <!-- JOURNEY / STATS SECTION -->
-<section class="py-24 bg-gradient-to-b from-[#0B1C2D] to-[#102A44] text-gray-200">
+<section class="py-32 bg-gradient-to-b from-[#0B1C2D] to-[#102A44] text-white">
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
 
     <!-- LEFT CONTENT -->
