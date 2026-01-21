@@ -18,25 +18,46 @@
   </style>
 </head>
 
-<body class="bg-[#0B1C2D] text-gray-200">
+<body class="bg-[#0B1C2D] text-gray-200 overflow-x-hidden"
+      style="padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right);">
+
 
 <!-- NAVBAR -->
-<header class="fixed w-full z-50 bg-[#0B1C2D]/80 backdrop-blur border-b border-white/10">
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+<header class="fixed w-full z-50 bg-[#0B1C2D]/90 backdrop-blur border-b border-white/10">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+
+    <!-- LOGO -->
     <div class="flex items-center gap-3">
       <img src="logo.webp" class="h-8 w-auto" alt="Logo">
-      <span class="font-semibold text-lime-400">Anshuman Aerotech</span>
+      <span class="font-semibold text-lime-400 text-sm sm:text-base">
+        Anshuman Aerotech
+      </span>
     </div>
 
+    <!-- DESKTOP NAV -->
     <nav class="space-x-8 hidden lg:block text-sm">
- 
-  <a href="index.html" class="hover:text-lime-400">Home</a>
-  <a href="about.html" class="hover:text-lime-400">About</a>
-  <a href="services.html" class="hover:text-lime-400">Services</a>
-  <a href="contact.html" class="hover:text-lime-400">Contact</a>
+      <a href="index.html" class="hover:text-lime-400">Home</a>
+      <a href="about.html" class="hover:text-lime-400">About</a>
+      <a href="services.html" class="hover:text-lime-400">Services</a>
+      <a href="contact.html" class="hover:text-lime-400">Contact</a>
     </nav>
+
+    <!-- HAMBURGER -->
+    <button id="menuBtn" class="lg:hidden text-white text-2xl">
+      ☰
+    </button>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu"
+       class="hidden lg:hidden bg-[#0B1C2D] border-t border-white/10 px-6 py-6 space-y-4">
+    <a href="index.html" class="block hover:text-lime-400">Home</a>
+    <a href="about.html" class="block hover:text-lime-400">About</a>
+    <a href="services.html" class="block hover:text-lime-400">Services</a>
+    <a href="contact.html" class="block hover:text-lime-400">Contact</a>
   </div>
 </header>
+
 
 <!-- HERO -->
 <section class="relative h-[70vh] pt-20 overflow-hidden rounded-b-[32px]">
@@ -155,6 +176,14 @@
     © 2026 Anshuman Aerotech • Aerospace & Defence Consulting • Made in India 🇮🇳
   </div>
 </footer>
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
 
 </body>
 </html>

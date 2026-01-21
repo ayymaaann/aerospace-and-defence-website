@@ -83,26 +83,50 @@
   border-color: #a3e635;
 }
 </style>
+<style>
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+</style>
 
 </head>
+<body class="bg-gradient-to-b from-[#0B1C2D] to-[#102A44] text-gray-200 overflow-x-hidden">
 
-<body class="bg-gradient-to-b from-[#0B1C2D] to-[#102A44] text-gray-200">
-
-<!-- NAVBAR -->
 <header class="fixed w-full z-50 bg-[#0B1C2D]/80 backdrop-blur border-b border-white/10">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-    <h1 class="text-xl font-bold tracking-wide text-lime-400">
+
+    <!-- LOGO / NAME -->
+    <h1 class="text-lg font-bold tracking-wide text-lime-400">
       Anshuman Aerotech
     </h1>
-    <nav class="space-x-8 hidden lg:block text-sm">
 
-  <a href="index.html" class="hover:text-lime-400">Home</a>
-  <a href="about.html" class="hover:text-lime-400">About</a>
-  <a href="services.html" class="hover:text-lime-400">Services</a>
-  <a href="contact.html" class="hover:text-lime-400">Contact</a>
+    <!-- DESKTOP NAV -->
+    <nav class="space-x-8 hidden lg:block text-sm">
+      <a href="index.html" class="hover:text-lime-400">Home</a>
+      <a href="about.html" class="text-lime-400">About</a>
+      <a href="services.html" class="hover:text-lime-400">Services</a>
+      <a href="contact.html" class="hover:text-lime-400">Contact</a>
+    </nav>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button id="menuBtn" class="lg:hidden text-white text-2xl">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden lg:hidden bg-[#0B1C2D] border-t border-white/10">
+    <nav class="flex flex-col px-6 py-6 space-y-4 text-sm">
+      <a href="index.html" class="hover:text-lime-400">Home</a>
+      <a href="about.html" class="text-lime-400">About</a>
+      <a href="services.html" class="hover:text-lime-400">Services</a>
+      <a href="contact.html" class="hover:text-lime-400">Contact</a>
     </nav>
   </div>
 </header>
+
 
 <!-- HERO / BANNER -->
 <section class="relative h-[70vh] w-full overflow-hidden pt-24">
@@ -154,12 +178,11 @@
   <div class="flex justify-center">
 <img
   src="https://www.airport-suppliers.com/wp-content/uploads/2020/02/RUBB-EFASS-Main.jpg"
-  alt="Defence Aircraft Hangar"
   class="rounded-2xl shadow-2xl
-         w-[650px] max-w-full
-         -mt-6
-         transition-transform duration-500
-         hover:scale-[1.02]"
+         w-full max-w-[650px]
+         -mt-6"
+/>
+
 />
 
   </div>
@@ -190,14 +213,14 @@
     </div>
 
     <!-- CONTENT WRAPPER -->
-    <div class="relative min-h-[520px] flex items-center justify-center">
+    <div class="relative min-h-[420px] md:min-h-[520px] flex items-center justify-center overflow-hidden px-4">
 
       <!-- STATE 1 -->
       <div id="state1" class="mission-card active text-center">
         <img
           src="https://airpowerasia.com/wp-content/uploads/2021/05/economictimes.indiatimes.com_.jpg"
           alt="Aerospace Engineering"
-          class="mx-auto rounded-2xl shadow-2xl mb-10 max-w-2xl"
+          class="mx-auto rounded-2xl shadow-2xl mb-10 w-full max-w-2xl object-cover"
         />
 
         <h3 class="text-3xl font-bold text-white mb-4">
@@ -217,7 +240,7 @@
         <img
           src="https://www.tedcomd.com/sites/default/files/AdobeStock_64925724.jpeg"
           alt="Innovation & Integrity"
-          class="mx-auto rounded-2xl shadow-2xl mb-10 max-w-2xl"
+          class="mx-auto rounded-2xl shadow-2xl mb-10 w-full max-w-2xl object-cover"
         />
 
         <h3 class="text-3xl font-bold text-white mb-4">
@@ -388,6 +411,12 @@ toggle.addEventListener("click", () => {
     active = 1;
   }
 });
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
 </script>
 
 </body>
